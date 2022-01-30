@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88872AB927A3F5E8005B2862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88872AB827A3F5E8005B2862 /* AppDelegate.swift */; };
+		88872ABB27A3F5E8005B2862 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88872ABA27A3F5E8005B2862 /* SceneDelegate.swift */; };
+		88872ABD27A3F5E8005B2862 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88872ABC27A3F5E8005B2862 /* LoginViewController.swift */; };
+		88872AC027A3F5E8005B2862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88872ABE27A3F5E8005B2862 /* Main.storyboard */; };
+		88872AC327A3F5E8005B2862 /* Bookz_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88872AC127A3F5E8005B2862 /* Bookz_CoreData.xcdatamodeld */; };
+		88872AC527A3F5EA005B2862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88872AC427A3F5EA005B2862 /* Assets.xcassets */; };
+		88872AC827A3F5EA005B2862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88872AC627A3F5EA005B2862 /* LaunchScreen.storyboard */; };
+		88B802A427A53A450085A747 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B802A327A53A450085A747 /* SignUpViewController.swift */; };
+		88B802A727A53AAA0085A747 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B802A627A53AAA0085A747 /* Authentication.swift */; };
+		88B802AB27A53B3A0085A747 /* CodableUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B802AA27A53B3A0085A747 /* CodableUserDefaults.swift */; };
+		88B802AE27A53BD80085A747 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B802AD27A53BD80085A747 /* AuthenticationViewModel.swift */; };
+		88B802B027A53EDE0085A747 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B802AF27A53EDE0085A747 /* Storage.swift */; };
+		88B802B527A542AC0085A747 /* HotelsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B802B427A542AC0085A747 /* HotelsListViewController.swift */; };
+		88B802B727A5434B0085A747 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B802B627A5434B0085A747 /* ProfileViewController.swift */; };
+		88B802B927A54A8B0085A747 /* CustomerTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B802B827A54A8B0085A747 /* CustomerTabBarController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		88872AB527A3F5E8005B2862 /* Bookz CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bookz CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88872AB827A3F5E8005B2862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		88872ABA27A3F5E8005B2862 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		88872ABC27A3F5E8005B2862 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		88872ABF27A3F5E8005B2862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		88872AC227A3F5E8005B2862 /* Bookz_CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookz_CoreData.xcdatamodel; sourceTree = "<group>"; };
+		88872AC427A3F5EA005B2862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88872AC727A3F5EA005B2862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		88872AC927A3F5EA005B2862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88B802A327A53A450085A747 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		88B802A627A53AAA0085A747 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		88B802AA27A53B3A0085A747 /* CodableUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableUserDefaults.swift; sourceTree = "<group>"; };
+		88B802AD27A53BD80085A747 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		88B802AF27A53EDE0085A747 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		88B802B427A542AC0085A747 /* HotelsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsListViewController.swift; sourceTree = "<group>"; };
+		88B802B627A5434B0085A747 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		88B802B827A54A8B0085A747 /* CustomerTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTabBarController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88872AB227A3F5E7005B2862 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88872AAC27A3F5E7005B2862 = {
+			isa = PBXGroup;
+			children = (
+				88872AB727A3F5E8005B2862 /* Bookz CoreData */,
+				88872AB627A3F5E8005B2862 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		88872AB627A3F5E8005B2862 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88872AB527A3F5E8005B2862 /* Bookz CoreData.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88872AB727A3F5E8005B2862 /* Bookz CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				88872AB827A3F5E8005B2862 /* AppDelegate.swift */,
+				88872ABA27A3F5E8005B2862 /* SceneDelegate.swift */,
+				88B802A527A53A830085A747 /* Model */,
+				88B802A127A53A1E0085A747 /* View */,
+				88B802AC27A53BC60085A747 /* ViewModel */,
+				88B802A827A53B0F0085A747 /* Utils */,
+				88872ABE27A3F5E8005B2862 /* Main.storyboard */,
+				88872AC427A3F5EA005B2862 /* Assets.xcassets */,
+				88872AC627A3F5EA005B2862 /* LaunchScreen.storyboard */,
+				88872AC927A3F5EA005B2862 /* Info.plist */,
+				88872AC127A3F5E8005B2862 /* Bookz_CoreData.xcdatamodeld */,
+			);
+			path = "Bookz CoreData";
+			sourceTree = "<group>";
+		};
+		88B802A127A53A1E0085A747 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88B802A227A53A240085A747 /* Authentication */,
+				88B802B327A542860085A747 /* Customer */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		88B802A227A53A240085A747 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				88872ABC27A3F5E8005B2862 /* LoginViewController.swift */,
+				88B802A327A53A450085A747 /* SignUpViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		88B802A527A53A830085A747 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88B802A627A53AAA0085A747 /* Authentication.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88B802A827A53B0F0085A747 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				88B802AF27A53EDE0085A747 /* Storage.swift */,
+				88B802AA27A53B3A0085A747 /* CodableUserDefaults.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		88B802AC27A53BC60085A747 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				88B802AD27A53BD80085A747 /* AuthenticationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		88B802B327A542860085A747 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				88B802B427A542AC0085A747 /* HotelsListViewController.swift */,
+				88B802B627A5434B0085A747 /* ProfileViewController.swift */,
+				88B802B827A54A8B0085A747 /* CustomerTabBarController.swift */,
+			);
+			path = Customer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88872AB427A3F5E7005B2862 /* Bookz CoreData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88872ACC27A3F5EA005B2862 /* Build configuration list for PBXNativeTarget "Bookz CoreData" */;
+			buildPhases = (
+				88872AB127A3F5E7005B2862 /* Sources */,
+				88872AB227A3F5E7005B2862 /* Frameworks */,
+				88872AB327A3F5E7005B2862 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bookz CoreData";
+			productName = "Bookz CoreData";
+			productReference = 88872AB527A3F5E8005B2862 /* Bookz CoreData.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88872AAD27A3F5E7005B2862 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					88872AB427A3F5E7005B2862 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 88872AB027A3F5E7005B2862 /* Build configuration list for PBXProject "Bookz CoreData" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88872AAC27A3F5E7005B2862;
+			productRefGroup = 88872AB627A3F5E8005B2862 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88872AB427A3F5E7005B2862 /* Bookz CoreData */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88872AB327A3F5E7005B2862 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88872AC827A3F5EA005B2862 /* LaunchScreen.storyboard in Resources */,
+				88872AC527A3F5EA005B2862 /* Assets.xcassets in Resources */,
+				88872AC027A3F5E8005B2862 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88872AB127A3F5E7005B2862 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88B802B027A53EDE0085A747 /* Storage.swift in Sources */,
+				88872ABD27A3F5E8005B2862 /* LoginViewController.swift in Sources */,
+				88B802AB27A53B3A0085A747 /* CodableUserDefaults.swift in Sources */,
+				88872AB927A3F5E8005B2862 /* AppDelegate.swift in Sources */,
+				88872AC327A3F5E8005B2862 /* Bookz_CoreData.xcdatamodeld in Sources */,
+				88B802B527A542AC0085A747 /* HotelsListViewController.swift in Sources */,
+				88B802B727A5434B0085A747 /* ProfileViewController.swift in Sources */,
+				88B802AE27A53BD80085A747 /* AuthenticationViewModel.swift in Sources */,
+				88872ABB27A3F5E8005B2862 /* SceneDelegate.swift in Sources */,
+				88B802A427A53A450085A747 /* SignUpViewController.swift in Sources */,
+				88B802A727A53AAA0085A747 /* Authentication.swift in Sources */,
+				88B802B927A54A8B0085A747 /* CustomerTabBarController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		88872ABE27A3F5E8005B2862 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88872ABF27A3F5E8005B2862 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		88872AC627A3F5EA005B2862 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88872AC727A3F5EA005B2862 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88872ACA27A3F5EA005B2862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		88872ACB27A3F5EA005B2862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88872ACD27A3F5EA005B2862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5Q2G7C7C3U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Bookz CoreData/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vishwa.Bookz-CoreData";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88872ACE27A3F5EA005B2862 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5Q2G7C7C3U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Bookz CoreData/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vishwa.Bookz-CoreData";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88872AB027A3F5E7005B2862 /* Build configuration list for PBXProject "Bookz CoreData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88872ACA27A3F5EA005B2862 /* Debug */,
+				88872ACB27A3F5EA005B2862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88872ACC27A3F5EA005B2862 /* Build configuration list for PBXNativeTarget "Bookz CoreData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88872ACD27A3F5EA005B2862 /* Debug */,
+				88872ACE27A3F5EA005B2862 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		88872AC127A3F5E8005B2862 /* Bookz_CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				88872AC227A3F5E8005B2862 /* Bookz_CoreData.xcdatamodel */,
+			);
+			currentVersion = 88872AC227A3F5E8005B2862 /* Bookz_CoreData.xcdatamodel */;
+			path = Bookz_CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 88872AAD27A3F5E7005B2862 /* Project object */;
+}
