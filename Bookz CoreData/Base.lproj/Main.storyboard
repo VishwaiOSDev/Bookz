@@ -207,6 +207,84 @@
             </objects>
             <point key="canvasLocation" x="1099" y="489"/>
         </scene>
+        <!--Booked-->
+        <scene sceneID="XVy-pC-I74">
+            <objects>
+                <viewController id="7hj-4Z-M4K" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pff-T1-aOd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="7s4-91-813"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Booked" image="a.book.closed.fill.he" catalog="system" id="tHR-80-lm9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o2Y-Vz-7Ry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3567" y="-587"/>
+        </scene>
+        <!--Fill-->
+        <scene sceneID="hkN-85-6Hb">
+            <objects>
+                <viewController id="piT-2X-dGP" customClass="PostHotelViewController" customModule="Bookz_CoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="25x-uk-3gB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axb-51-lsx">
+                                <rect key="frame" x="10" y="743" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="01Y-HM-h5S"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Post" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="postButtonPressed:" destination="piT-2X-dGP" eventType="touchUpInside" id="6TF-ds-MSm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSJ-sB-mYF">
+                                <rect key="frame" x="331" y="49" width="73" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log out"/>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="piT-2X-dGP" eventType="touchUpInside" id="cdw-V9-4cw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d5K-MX-Vum"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d5K-MX-Vum" firstAttribute="trailing" secondItem="hSJ-sB-mYF" secondAttribute="trailing" constant="10" id="8m8-fR-cJU"/>
+                            <constraint firstItem="d5K-MX-Vum" firstAttribute="bottom" secondItem="axb-51-lsx" secondAttribute="bottom" constant="20" id="bcI-MW-QVI"/>
+                            <constraint firstItem="d5K-MX-Vum" firstAttribute="trailing" secondItem="axb-51-lsx" secondAttribute="trailing" constant="10" id="iTj-J8-Thq"/>
+                            <constraint firstItem="axb-51-lsx" firstAttribute="leading" secondItem="d5K-MX-Vum" secondAttribute="leading" constant="10" id="k8s-Yx-t4m"/>
+                            <constraint firstItem="hSJ-sB-mYF" firstAttribute="top" secondItem="d5K-MX-Vum" secondAttribute="top" constant="5" id="xJ7-FD-SqF"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fill" image="square.and.pencil" catalog="system" id="CmR-U3-KC4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DOp-96-QA0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3567" y="-1283"/>
+        </scene>
+        <!--Owner Tab Bar Controller-->
+        <scene sceneID="oDT-0U-nBf">
+            <objects>
+                <tabBarController storyboardIdentifier="OwnerTabBarController" id="qKY-WD-NBY" customClass="OwnerTabBarController" customModule="Bookz_CoreData" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iPJ-Us-e7i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="piT-2X-dGP" kind="relationship" relationship="viewControllers" id="00s-sA-0ZZ"/>
+                        <segue destination="7hj-4Z-M4K" kind="relationship" relationship="viewControllers" id="y9B-5p-q04"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwd-sO-jrw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2435" y="-810"/>
+        </scene>
         <!--Hotels-->
         <scene sceneID="W76-nz-G6A">
             <objects>
@@ -297,8 +375,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="a.book.closed.fill.he" catalog="system" width="115" height="128"/>
         <image name="list.triangle" catalog="system" width="128" height="91"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

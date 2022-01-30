@@ -19,7 +19,13 @@ class LoginViewController: UIViewController {
         let password = passwordTextField.text!
         let user = Authentication.User(email : email, password: password)
         viewModel.doLogin(with: user)
+        if viewModel.isLoggedIn && viewModel.isOwner {
+            guard let ownerTabBarController = storyboard?.instantiateViewController(withIdentifier: "OwnerTabBarController") else { return }
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(ownerTabBarController)
+        } else if viewModel.isLoggedIn {
+            guard let customerTabBarController = storyboard?.instantiateViewController(withIdentifier: "CustomerTabBar") else { return }
+            (UIApplication.shared.connectedScenes.first?.delegate as?  SceneDelegate)?.changeRootViewController(customerTabBarController)
+        }
     }
-    
 }
 

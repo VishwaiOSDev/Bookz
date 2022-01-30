@@ -14,6 +14,8 @@
 		88872AC327A3F5E8005B2862 /* Bookz_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88872AC127A3F5E8005B2862 /* Bookz_CoreData.xcdatamodeld */; };
 		88872AC527A3F5EA005B2862 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88872AC427A3F5EA005B2862 /* Assets.xcassets */; };
 		88872AC827A3F5EA005B2862 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88872AC627A3F5EA005B2862 /* LaunchScreen.storyboard */; };
+		88A48A8F27A6D3E900A75A14 /* OwnerTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A48A8E27A6D3E900A75A14 /* OwnerTabBarController.swift */; };
+		88A48A9127A6D55100A75A14 /* PostHotelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A48A9027A6D55100A75A14 /* PostHotelViewController.swift */; };
 		88B802A427A53A450085A747 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B802A327A53A450085A747 /* SignUpViewController.swift */; };
 		88B802A727A53AAA0085A747 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B802A627A53AAA0085A747 /* Authentication.swift */; };
 		88B802AB27A53B3A0085A747 /* CodableUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B802AA27A53B3A0085A747 /* CodableUserDefaults.swift */; };
@@ -34,6 +36,8 @@
 		88872AC427A3F5EA005B2862 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88872AC727A3F5EA005B2862 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88872AC927A3F5EA005B2862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88A48A8E27A6D3E900A75A14 /* OwnerTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerTabBarController.swift; sourceTree = "<group>"; };
+		88A48A9027A6D55100A75A14 /* PostHotelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHotelViewController.swift; sourceTree = "<group>"; };
 		88B802A327A53A450085A747 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		88B802A627A53AAA0085A747 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		88B802AA27A53B3A0085A747 /* CodableUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableUserDefaults.swift; sourceTree = "<group>"; };
@@ -89,11 +93,21 @@
 			path = "Bookz CoreData";
 			sourceTree = "<group>";
 		};
+		88A48A8D27A6D3D200A75A14 /* Onwer */ = {
+			isa = PBXGroup;
+			children = (
+				88A48A8E27A6D3E900A75A14 /* OwnerTabBarController.swift */,
+				88A48A9027A6D55100A75A14 /* PostHotelViewController.swift */,
+			);
+			path = Onwer;
+			sourceTree = "<group>";
+		};
 		88B802A127A53A1E0085A747 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				88B802A227A53A240085A747 /* Authentication */,
 				88B802B327A542860085A747 /* Customer */,
+				88A48A8D27A6D3D200A75A14 /* Onwer */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,9 +149,9 @@
 		88B802B327A542860085A747 /* Customer */ = {
 			isa = PBXGroup;
 			children = (
+				88B802B827A54A8B0085A747 /* CustomerTabBarController.swift */,
 				88B802B427A542AC0085A747 /* HotelsListViewController.swift */,
 				88B802B627A5434B0085A747 /* ProfileViewController.swift */,
-				88B802B827A54A8B0085A747 /* CustomerTabBarController.swift */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -213,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A48A8F27A6D3E900A75A14 /* OwnerTabBarController.swift in Sources */,
 				88B802B027A53EDE0085A747 /* Storage.swift in Sources */,
 				88872ABD27A3F5E8005B2862 /* LoginViewController.swift in Sources */,
 				88B802AB27A53B3A0085A747 /* CodableUserDefaults.swift in Sources */,
@@ -223,6 +238,7 @@
 				88B802AE27A53BD80085A747 /* AuthenticationViewModel.swift in Sources */,
 				88872ABB27A3F5E8005B2862 /* SceneDelegate.swift in Sources */,
 				88B802A427A53A450085A747 /* SignUpViewController.swift in Sources */,
+				88A48A9127A6D55100A75A14 /* PostHotelViewController.swift in Sources */,
 				88B802A727A53AAA0085A747 /* Authentication.swift in Sources */,
 				88B802B927A54A8B0085A747 /* CustomerTabBarController.swift in Sources */,
 			);

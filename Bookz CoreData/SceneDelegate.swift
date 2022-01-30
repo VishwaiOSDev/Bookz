@@ -20,10 +20,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let isLoggedIn = Storage.fetchBoolDataFromUserDefaults(key: "isLoggedIn")
-        if isLoggedIn {
+        let isOwner = Storage.fetchBoolDataFromUserDefaults(key: "owner")
+        if isLoggedIn && isOwner {
+            let ownerTabBarController = storyboard.instantiateViewController(withIdentifier: "OwnerTabBarController")
+            window?.rootViewController = ownerTabBarController
+        }
+        else if isLoggedIn {
             let customerTabBarController = storyboard.instantiateViewController(withIdentifier: "CustomerTabBar")
             window?.rootViewController = customerTabBarController
-        } else {
+        }
+        else {
             let loginNavigationController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationController")
             window?.rootViewController = loginNavigationController
         }
@@ -71,4 +77,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
 }
-
