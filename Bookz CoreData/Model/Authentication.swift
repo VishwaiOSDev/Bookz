@@ -5,11 +5,14 @@
 //  Created by Vishwa  R on 29/01/22.
 //
 
-import Foundation
+import CoreData
+import UIKit
 
 struct Authentication {
     
-    @CodableUserDefaults private(set) var users : [User]
+    //    @CodableUserDefaults private(set) var users : [User]
+    var users = [UserEntity]()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     struct User : Codable {
         var name : String?
@@ -28,29 +31,48 @@ struct Authentication {
         
     }
     
-    mutating func performSignUp(for user : User) -> Bool {
-        let accountExists = checkAccountExists(of: user)
-        if accountExists {
-            print("\(user.email) is already exists")
+    func performSignUp(for user : User) -> Bool {
+        let userEntity = UserEntity(context: context)
+        userEntity.email = user.email
+        userEntity.name = user.name!
+        userEntity.phone = user.phone!
+        userEntity.password = user.password
+        userEntity.isOwner = user.isOwner
+        if saveData() {
+            return true
+        } else {
             return false
         }
-        users.append(user)
-        Storage.saveDataInUserDefaults(data: user.email, forKey: "email")
-        return true
     }
     
-    func performLogin(for details : User) -> Bool {
-        for user in users {
-            if user == details {
+    func saveData() -> Bool {
+        do {
+            try context.save()
+            return true
+        }
+        catch {
+            print(error.localizedDescription)
+            return false
+        }
+    }
+    
+    func performLogin(for user : User) -> Bool {
+        do {
+            let request = UserEntity.fetchRequest()
+            request.predicate = NSPredicate(format: "email == %@", user.email)
+            let userInCoreData = try context.fetch(request)
+            if userInCoreData.isEmpty {
+                print("User Doesn't Exists.")
+                return false
+            }
+            if userInCoreData[0] == user {
                 return true
             }
+        } catch {
+            print(error.localizedDescription)
         }
-        print("Invaild email or password.")
+        print("Invaild Email or Password.")
         return false
-    }
-    
-    func getAllUser() {
-        print(users)
     }
     
 }
@@ -72,9 +94,9 @@ extension Authentication {
 }
 
 extension Authentication.User : Equatable {
-    static func == (lhs : Authentication.User, rhs : Authentication.User) -> Bool {
-        if lhs.email == rhs.email {
-            return lhs.password == rhs.password
+    static func == (lhs : UserEntity, rhs : Authentication.User) -> Bool {
+        if lhs.email! == rhs.email {
+            return lhs.password! == rhs.password
         }
         return false
     }

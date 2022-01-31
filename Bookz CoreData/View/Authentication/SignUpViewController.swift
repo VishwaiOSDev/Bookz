@@ -18,10 +18,10 @@ class SignUpViewController: UIViewController {
     private var viewModel = AuthenticationViewModel()
     
     @IBAction func signUpPressed(_ sender: UIButton) {
-        let email = emailTextField.text!
-        let name = nameTextField.text!
-        let phone = phoneTextField.text!
-        let password = passwordTextField.text!
+        guard let email = emailTextField.text,
+              let name = nameTextField.text,
+              let phone = phoneTextField.text,
+              let password = passwordTextField.text else { return }
         let user = Authentication.User(name: name, phone: phone, email: email, password: password, isOwner: ownerSwitch.isOn)
         viewModel.doSignUp(with: user)
     }
