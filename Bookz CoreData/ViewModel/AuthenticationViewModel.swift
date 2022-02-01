@@ -35,6 +35,7 @@ final class AuthenticationViewModel {
     func doSignUp(with details : Authentication.User) {
         self.isLoggedIn = model.performSignUp(for: details)
         self.isOwner = model.checkUserOrOwner(for: details)
+        Storage.saveDataInUserDefaults(data: details.email, forKey: "email")
         delegate?.updateView()
     }
     
@@ -42,6 +43,7 @@ final class AuthenticationViewModel {
         self.isLoggedIn = model.performLogin(for: details)
         if isLoggedIn {
             self.isOwner = model.checkUserOrOwner(for: details)
+            Storage.saveDataInUserDefaults(data: details.email, forKey: "email")
             delegate?.updateView()
         }
     }

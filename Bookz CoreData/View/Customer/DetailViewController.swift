@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
     @IBOutlet weak var hotelDescriptionLabel: UILabel!
     @IBOutlet weak var hotelPriceLabel: UILabel!
     var hotelTitle : String = ""
@@ -17,7 +17,6 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.navigationController?.setNavigationBarHidden(true, animated: true)
         title = hotelTitle
         DispatchQueue.main.async {
             self.hotelDescriptionLabel.text = self.hotelDescription
@@ -26,6 +25,13 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func bookNowPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "showBookModal", sender: self)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let bookModelViewController = segue.destination as! BookModalViewController
+        bookModelViewController.hotelName = hotelTitle
+        bookModelViewController.hotelPrice = price
+    }
+    
 }

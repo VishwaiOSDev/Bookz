@@ -27,7 +27,6 @@ struct Authentication {
             self.password = password
             self.isOwner = isOwner
         }
-        
     }
     
     func performSignUp(for user : User) -> Bool {

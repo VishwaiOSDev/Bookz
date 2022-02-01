@@ -31,6 +31,7 @@
 		88F1138127A926C4000B64C7 /* HotelListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1137F27A926C4000B64C7 /* HotelListCell.swift */; };
 		88F1138227A926C4000B64C7 /* HotelListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F1138027A926C4000B64C7 /* HotelListCell.xib */; };
 		88F1138527A9358E000B64C7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1138427A9358E000B64C7 /* DetailViewController.swift */; };
+		88F1138727A93B98000B64C7 /* BookModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F1138627A93B97000B64C7 /* BookModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		88F1137F27A926C4000B64C7 /* HotelListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelListCell.swift; sourceTree = "<group>"; };
 		88F1138027A926C4000B64C7 /* HotelListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelListCell.xib; sourceTree = "<group>"; };
 		88F1138427A9358E000B64C7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		88F1138627A93B97000B64C7 /* BookModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				88B802B427A542AC0085A747 /* HotelsListViewController.swift */,
 				88B802B627A5434B0085A747 /* ProfileViewController.swift */,
 				88F1138427A9358E000B64C7 /* DetailViewController.swift */,
+				88F1138627A93B97000B64C7 /* BookModalViewController.swift */,
 				88F1138327A926CC000B64C7 /* HotelListCell */,
 			);
 			path = Customer;
@@ -259,6 +262,7 @@
 			files = (
 				88F1137827A8F703000B64C7 /* OwnerViewModel.swift in Sources */,
 				88A48A8F27A6D3E900A75A14 /* OwnerTabBarController.swift in Sources */,
+				88F1138727A93B98000B64C7 /* BookModalViewController.swift in Sources */,
 				88F1137A27A8F727000B64C7 /* Owner.swift in Sources */,
 				88B802B027A53EDE0085A747 /* Storage.swift in Sources */,
 				88872ABD27A3F5E8005B2862 /* LoginViewController.swift in Sources */,

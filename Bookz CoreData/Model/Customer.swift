@@ -11,6 +11,7 @@ import CoreData
 struct Customer {
     
     private(set) var hotels : [HotelEntity] = []
+    private var users = [UserEntity]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     init() {
@@ -24,6 +25,21 @@ struct Customer {
         } catch {
             print(error.localizedDescription)
         }
+    }
+    
+    func getUserDetails() -> UserEntity? {
+        guard let loggedInEmail = UserDefaults.standard.string(forKey: "email") else { return nil }
+        let request = UserEntity.fetchRequest()
+        let predicate = NSPredicate(format: "email == %@", loggedInEmail)
+        request.predicate = predicate
+        do {
+            let user = try context.fetch(request)
+            return user[0]
+        } catch {
+            print("Failed to fetch date from CoreData.")
+            return nil
+        }
+        
     }
     
 }
