@@ -10,8 +10,7 @@ import UIKit
 
 struct Authentication {
     
-    //    @CodableUserDefaults private(set) var users : [User]
-    var users = [UserEntity]()
+    private(set) var users = [UserEntity]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     struct User : Codable {
@@ -64,8 +63,7 @@ struct Authentication {
             if userInCoreData.isEmpty {
                 print("User Doesn't Exists.")
                 return false
-            }
-            if userInCoreData[0] == user {
+            } else if userInCoreData[0] == user {
                 return true
             }
         } catch {
@@ -84,12 +82,17 @@ extension Authentication {
         }
     }
     func checkUserOrOwner(for details : User) -> Bool {
-        users.contains { data in
-            if data.email == details.email {
-                return data.isOwner
+        do {
+            let request = UserEntity.fetchRequest()
+            request.predicate = NSPredicate(format: "email == %@", details.email)
+            let userInCoreData = try context.fetch(request)
+            if userInCoreData[0].isOwner {
+                return true
             }
-            return false
+        } catch {
+            print(error.localizedDescription)
         }
+        return false
     }
 }
 

@@ -17,6 +17,10 @@ class SignUpViewController: UIViewController {
     
     private var viewModel = AuthenticationViewModel()
     
+    override func viewDidLoad() {
+        viewModel.delegate = self
+    }
+    
     @IBAction func signUpPressed(_ sender: UIButton) {
         guard let email = emailTextField.text,
               let name = nameTextField.text,
@@ -26,4 +30,16 @@ class SignUpViewController: UIViewController {
         viewModel.doSignUp(with: user)
     }
     
+}
+
+extension SignUpViewController : AuthenticationDelegate {
+    func updateView() {
+        if viewModel.isLoggedIn && viewModel.isOwner {
+            guard let ownerTabBarController = storyboard?.instantiateViewController(withIdentifier: "OwnerTabBarController") else { return }
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(ownerTabBarController)
+        } else if viewModel.isLoggedIn {
+            guard let customerTabBarController = storyboard?.instantiateViewController(withIdentifier: "CustomerTabBar") else { return }
+            (UIApplication.shared.connectedScenes.first?.delegate as?  SceneDelegate)?.changeRootViewController(customerTabBarController)
+        }
+    }
 }

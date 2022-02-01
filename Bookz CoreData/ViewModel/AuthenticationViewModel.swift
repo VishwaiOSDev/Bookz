@@ -35,13 +35,15 @@ final class AuthenticationViewModel {
     func doSignUp(with details : Authentication.User) {
         self.isLoggedIn = model.performSignUp(for: details)
         self.isOwner = model.checkUserOrOwner(for: details)
+        delegate?.updateView()
     }
     
     func doLogin(with details : Authentication.User) {
-        //        self.isLoggedIn = model.performLogin(for: details)
-        //        self.isOwner = model.checkUserOrOwner(for: details)
         self.isLoggedIn = model.performLogin(for: details)
-        delegate?.updateView()
+        if isLoggedIn {
+            self.isOwner = model.checkUserOrOwner(for: details)
+            delegate?.updateView()
+        }
     }
     
     func performLogout() {
