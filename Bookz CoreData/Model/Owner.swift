@@ -26,10 +26,25 @@ struct Owner : HotelData {
         hotelEntity.hotelName = details.hotelName
         hotelEntity.hotelDescription = details.description
         hotelEntity.hotelPrice = details.price
+        hotelEntity.user = getOwnerDetails()
         if saveData() {
             return true
         } else {
             return false
+        }
+    }
+    
+    private func getOwnerDetails() -> UserEntity? {
+        guard let emailOfOwner = UserDefaults.standard.string(forKey: "email") else { return nil }
+        let request = UserEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "email == %@", emailOfOwner)
+        do {
+            let user = try context.fetch(request)
+            return user[0]
+        }
+        catch {
+            print(error.localizedDescription)
+            return nil
         }
     }
     

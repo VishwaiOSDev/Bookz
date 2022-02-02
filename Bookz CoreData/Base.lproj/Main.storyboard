@@ -210,18 +210,42 @@
         <!--Booked-->
         <scene sceneID="XVy-pC-I74">
             <objects>
-                <viewController id="7hj-4Z-M4K" sceneMemberID="viewController">
+                <viewController id="7hj-4Z-M4K" customClass="BookedHotelViewController" customModule="Bookz_CoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pff-T1-aOd">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booked Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czs-Xk-8cA">
+                                <rect key="frame" x="10" y="49" width="408" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Cpn-IO-WzT">
+                                <rect key="frame" x="0.0" y="92" width="428" height="751"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7s4-91-813"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="czs-Xk-8cA" firstAttribute="top" secondItem="7s4-91-813" secondAttribute="top" constant="5" id="5lD-gC-pY6"/>
+                            <constraint firstItem="7s4-91-813" firstAttribute="trailing" secondItem="czs-Xk-8cA" secondAttribute="trailing" constant="10" id="7MU-zq-zzv"/>
+                            <constraint firstItem="7s4-91-813" firstAttribute="bottom" secondItem="Cpn-IO-WzT" secondAttribute="bottom" id="Gve-2I-qRJ"/>
+                            <constraint firstItem="Cpn-IO-WzT" firstAttribute="trailing" secondItem="7s4-91-813" secondAttribute="trailing" id="Mnk-sE-rUA"/>
+                            <constraint firstItem="czs-Xk-8cA" firstAttribute="leading" secondItem="7s4-91-813" secondAttribute="leading" constant="10" id="n66-vl-GQu"/>
+                            <constraint firstItem="Cpn-IO-WzT" firstAttribute="top" secondItem="czs-Xk-8cA" secondAttribute="bottom" constant="2" id="oNS-25-9a8"/>
+                            <constraint firstItem="Cpn-IO-WzT" firstAttribute="leading" secondItem="7s4-91-813" secondAttribute="leading" id="zWe-7h-1JA"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Booked" image="a.book.closed.fill.he" catalog="system" id="tHR-80-lm9"/>
+                    <connections>
+                        <outlet property="tableView" destination="Cpn-IO-WzT" id="hNW-lb-U1c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2Y-Vz-7Ry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3567" y="-587"/>
+            <point key="canvasLocation" x="3566.3551401869158" y="-587.04103671706264"/>
         </scene>
         <!--Fill-->
         <scene sceneID="hkN-85-6Hb">
@@ -491,7 +515,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJp-YX-qh6">
-                                <rect key="frame" x="99.333333333333329" y="498.66666666666674" width="20.333333333333329" height="36"/>
+                                <rect key="frame" x="99.333333333333329" y="498.66666666666674" width="154.33333333333337" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -503,6 +527,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Book" cornerStyle="large"/>
+                                <connections>
+                                    <action selector="bookButtonPressed:" destination="mnb-Wg-51w" eventType="touchUpInside" id="N3v-HA-Sqf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fmv-vO-u1m"/>

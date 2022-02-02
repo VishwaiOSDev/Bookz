@@ -43,9 +43,7 @@ extension HotelsListViewController : UITableViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailsViewController = segue.destination as! DetailViewController
         if let indexPath = tableView.indexPathForSelectedRow {
-            detailsViewController.hotelTitle = hotelsList[indexPath.row].hotelName!
-            detailsViewController.price = hotelsList[indexPath.row].hotelPrice!
-            detailsViewController.hotelDescription = hotelsList[indexPath.row].hotelDescription!
+            detailsViewController.hotelDetails = hotelsList[indexPath.row]
         }
     }
     

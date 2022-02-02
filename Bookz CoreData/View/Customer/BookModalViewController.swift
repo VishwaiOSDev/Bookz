@@ -13,12 +13,13 @@ class BookModalViewController: UIViewController {
     @IBOutlet weak var checkOutDatePicker: UIDatePicker!
     @IBOutlet weak var priceLabel: UILabel!
     private var viewModel = CustomerViewModel()
-    var hotelName = ""
-    var hotelPrice = ""
+    private var bookingViewModel = BookingViewModel()
+    var hotelDetails : HotelEntity? = HotelEntity()
+    var calucatedPrice : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        priceLabel.text = "₹\(hotelPrice)"
+        priceLabel.text = "₹\((self.hotelDetails?.hotelPrice)!)"
         checkInDatePicker.minimumDate = Date()
     }
     
@@ -27,10 +28,15 @@ class BookModalViewController: UIViewController {
     }
     
     @IBAction func checkOutChanged(_ sender: UIDatePicker) {
-        let calucatedPrice = viewModel.calucatePrice(fromDate: checkInDatePicker.date, toDate: checkOutDatePicker.date, price: hotelPrice)
+        calucatedPrice = viewModel.calucatePrice(fromDate: checkInDatePicker.date, toDate: checkOutDatePicker.date, price: (self.hotelDetails?.hotelPrice)!)
         DispatchQueue.main.async {
-            self.priceLabel.text = "₹\(calucatedPrice)"
+            self.priceLabel.text = "₹\(self.calucatedPrice)"
         }
+    }
+    
+    @IBAction func bookButtonPressed(_ sender: UIButton) {
+        guard let hotel = hotelDetails else { return }
+        bookingViewModel.bookHotel(fromDate: checkInDatePicker.date, toDate: checkOutDatePicker.date, totalCost: calucatedPrice, in: hotel)
     }
     
 }

@@ -11,16 +11,14 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var hotelDescriptionLabel: UILabel!
     @IBOutlet weak var hotelPriceLabel: UILabel!
-    var hotelTitle : String = ""
-    var hotelDescription : String = ""
-    var price : String = ""
-    
+    var hotelDetails : HotelEntity? = HotelEntity()
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = hotelTitle
+        title = hotelDetails?.hotelName!
         DispatchQueue.main.async {
-            self.hotelDescriptionLabel.text = self.hotelDescription
-            self.hotelPriceLabel.text = "₹\(self.price)"
+            self.hotelDescriptionLabel.text = self.hotelDetails?.hotelDescription!
+            self.hotelPriceLabel.text = "₹\((self.hotelDetails?.hotelPrice)!)"
         }
     }
     
@@ -30,8 +28,7 @@ class DetailViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let bookModelViewController = segue.destination as! BookModalViewController
-        bookModelViewController.hotelName = hotelTitle
-        bookModelViewController.hotelPrice = price
+        bookModelViewController.hotelDetails = hotelDetails
     }
     
 }

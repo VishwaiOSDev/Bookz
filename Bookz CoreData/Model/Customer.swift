@@ -39,7 +39,6 @@ struct Customer {
             print("Failed to fetch date from CoreData.")
             return nil
         }
-        
     }
     
 }

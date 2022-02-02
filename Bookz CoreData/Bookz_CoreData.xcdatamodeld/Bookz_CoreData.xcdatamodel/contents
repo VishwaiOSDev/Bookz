@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BookingEntity" representedClassName="BookingEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="fromData" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="toDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="totalCost" optional="YES" attributeType="String"/>
+        <relationship name="hotel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HotelEntity"/>
+        <relationship name="user" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="booking" inverseEntity="UserEntity"/>
+    </entity>
     <entity name="HotelEntity" representedClassName="HotelEntity" syncable="YES" codeGenerationType="class">
         <attribute name="hotelDescription" optional="YES" attributeType="String"/>
         <attribute name="hotelName" optional="YES" attributeType="String"/>
         <attribute name="hotelPrice" optional="YES" attributeType="String"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="hotel" inverseEntity="UserEntity"/>
     </entity>
     <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
         <attribute name="email" optional="YES" attributeType="String"/>
@@ -11,9 +19,12 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="phone" optional="YES" attributeType="String"/>
+        <relationship name="booking" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BookingEntity" inverseName="user" inverseEntity="BookingEntity"/>
+        <relationship name="hotel" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="HotelEntity" inverseName="user" inverseEntity="HotelEntity"/>
     </entity>
     <elements>
-        <element name="UserEntity" positionX="-63" positionY="-18" width="128" height="104"/>
-        <element name="HotelEntity" positionX="-63" positionY="18" width="128" height="74"/>
+        <element name="HotelEntity" positionX="-135.1910400390625" positionY="74.28271484375" width="128" height="103"/>
+        <element name="UserEntity" positionX="279.8292236328125" positionY="43.36212158203125" width="128" height="148"/>
+        <element name="BookingEntity" positionX="95.5789794921875" positionY="293.5746459960938" width="128" height="118"/>
     </elements>
 </model>

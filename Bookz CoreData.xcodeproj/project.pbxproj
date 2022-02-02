@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		882980C427AA4EFD00E1B740 /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882980C327AA4EFC00E1B740 /* BookingViewModel.swift */; };
+		882980C627AA4F1400E1B740 /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882980C527AA4F1400E1B740 /* Booking.swift */; };
+		882980C827AA5EE600E1B740 /* BookedHotelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882980C727AA5EE600E1B740 /* BookedHotelViewController.swift */; };
+		882980CE27AA718A00E1B740 /* BookedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882980CC27AA718A00E1B740 /* BookedCell.swift */; };
+		882980CF27AA718A00E1B740 /* BookedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882980CD27AA718A00E1B740 /* BookedCell.xib */; };
 		88872AB927A3F5E8005B2862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88872AB827A3F5E8005B2862 /* AppDelegate.swift */; };
 		88872ABB27A3F5E8005B2862 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88872ABA27A3F5E8005B2862 /* SceneDelegate.swift */; };
 		88872ABD27A3F5E8005B2862 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88872ABC27A3F5E8005B2862 /* LoginViewController.swift */; };
@@ -35,6 +40,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		882980C327AA4EFC00E1B740 /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
+		882980C527AA4F1400E1B740 /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
+		882980C727AA5EE600E1B740 /* BookedHotelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedHotelViewController.swift; sourceTree = "<group>"; };
+		882980CC27AA718A00E1B740 /* BookedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedCell.swift; sourceTree = "<group>"; };
+		882980CD27AA718A00E1B740 /* BookedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookedCell.xib; sourceTree = "<group>"; };
 		88872AB527A3F5E8005B2862 /* Bookz CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bookz CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88872AB827A3F5E8005B2862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88872ABA27A3F5E8005B2862 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		882980C927AA714A00E1B740 /* BookedCell */ = {
+			isa = PBXGroup;
+			children = (
+				882980CC27AA718A00E1B740 /* BookedCell.swift */,
+				882980CD27AA718A00E1B740 /* BookedCell.xib */,
+			);
+			path = BookedCell;
+			sourceTree = "<group>";
+		};
 		88872AAC27A3F5E7005B2862 = {
 			isa = PBXGroup;
 			children = (
@@ -112,8 +131,10 @@
 		88A48A8D27A6D3D200A75A14 /* Onwer */ = {
 			isa = PBXGroup;
 			children = (
+				882980C927AA714A00E1B740 /* BookedCell */,
 				88A48A8E27A6D3E900A75A14 /* OwnerTabBarController.swift */,
 				88A48A9027A6D55100A75A14 /* PostHotelViewController.swift */,
+				882980C727AA5EE600E1B740 /* BookedHotelViewController.swift */,
 			);
 			path = Onwer;
 			sourceTree = "<group>";
@@ -143,6 +164,7 @@
 				88B802A627A53AAA0085A747 /* Authentication.swift */,
 				88F1137927A8F727000B64C7 /* Owner.swift */,
 				88F1137B27A904F3000B64C7 /* Customer.swift */,
+				882980C527AA4F1400E1B740 /* Booking.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +184,7 @@
 				88B802AD27A53BD80085A747 /* AuthenticationViewModel.swift */,
 				88F1137727A8F702000B64C7 /* OwnerViewModel.swift */,
 				88F1137D27A9056A000B64C7 /* CustomerViewModel.swift */,
+				882980C327AA4EFC00E1B740 /* BookingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -246,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882980CF27AA718A00E1B740 /* BookedCell.xib in Resources */,
 				88872AC827A3F5EA005B2862 /* LaunchScreen.storyboard in Resources */,
 				88872AC527A3F5EA005B2862 /* Assets.xcassets in Resources */,
 				88F1138227A926C4000B64C7 /* HotelListCell.xib in Resources */,
@@ -261,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88F1137827A8F703000B64C7 /* OwnerViewModel.swift in Sources */,
+				882980C827AA5EE600E1B740 /* BookedHotelViewController.swift in Sources */,
 				88A48A8F27A6D3E900A75A14 /* OwnerTabBarController.swift in Sources */,
 				88F1138727A93B98000B64C7 /* BookModalViewController.swift in Sources */,
 				88F1137A27A8F727000B64C7 /* Owner.swift in Sources */,
@@ -270,6 +295,7 @@
 				88872AB927A3F5E8005B2862 /* AppDelegate.swift in Sources */,
 				88F1138527A9358E000B64C7 /* DetailViewController.swift in Sources */,
 				88872AC327A3F5E8005B2862 /* Bookz_CoreData.xcdatamodeld in Sources */,
+				882980C427AA4EFD00E1B740 /* BookingViewModel.swift in Sources */,
 				88B802B527A542AC0085A747 /* HotelsListViewController.swift in Sources */,
 				88B802B727A5434B0085A747 /* ProfileViewController.swift in Sources */,
 				88B802AE27A53BD80085A747 /* AuthenticationViewModel.swift in Sources */,
@@ -280,7 +306,9 @@
 				88A48A9127A6D55100A75A14 /* PostHotelViewController.swift in Sources */,
 				88B802A727A53AAA0085A747 /* Authentication.swift in Sources */,
 				88B802B927A54A8B0085A747 /* CustomerTabBarController.swift in Sources */,
+				882980CE27AA718A00E1B740 /* BookedCell.swift in Sources */,
 				88F1138127A926C4000B64C7 /* HotelListCell.swift in Sources */,
+				882980C627AA4F1400E1B740 /* Booking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
