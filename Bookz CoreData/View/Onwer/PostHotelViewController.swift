@@ -9,22 +9,44 @@ import UIKit
 
 class PostHotelViewController: UIViewController {
     
-    private var viewModel = AuthenticationViewModel()
+    @IBOutlet weak var hotelNameTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var priceTextField: UITextField!
+    
+    private var viewModel = OwnerViewModel()
+    private var authenticationViewModel = AuthenticationViewModel()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        viewModel.delegate = self
+    }
+    
+    @IBAction func postButtonPressed(_ sender: UIButton) {
+        guard let hotelName = hotelNameTextField.text,
+              let description = descriptionTextField.text,
+              let price = priceTextField.text else { return }
+        let hotel = Owner(hotelName: hotelName, description: description, price: price)
+        viewModel.uploadHotel(data: hotel)
     }
     
     @IBAction func logoutPressed(_ sender: UIButton) {
-        viewModel.performLogout()
+        authenticationViewModel.performLogout()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let loginNavController = storyboard.instantiateViewController(withIdentifier: "LoginNavigationController")
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(loginNavController)
     }
     
-    @IBAction func postButtonPressed(_ sender: UIButton) {
+}
+
+extension PostHotelViewController : HotelViewModelDelegate {
+    func updateView() {
+        DispatchQueue.main.async {
+            self.hotelNameTextField.text = ""
+            self.descriptionTextField.text = ""
+            self.priceTextField.text = ""
+        }
     }
     
+    func failedToUpdate() {
+        print("Show Alreat that it has failed to update in database.")
+    }
 }

@@ -17,13 +17,29 @@ class SignUpViewController: UIViewController {
     
     private var viewModel = AuthenticationViewModel()
     
+    override func viewDidLoad() {
+        viewModel.delegate = self
+    }
+    
     @IBAction func signUpPressed(_ sender: UIButton) {
-        let email = emailTextField.text!
-        let name = nameTextField.text!
-        let phone = phoneTextField.text!
-        let password = passwordTextField.text!
+        guard let email = emailTextField.text,
+              let name = nameTextField.text,
+              let phone = phoneTextField.text,
+              let password = passwordTextField.text else { return }
         let user = Authentication.User(name: name, phone: phone, email: email, password: password, isOwner: ownerSwitch.isOn)
         viewModel.doSignUp(with: user)
     }
     
+}
+
+extension SignUpViewController : AuthenticationDelegate {
+    func updateView() {
+        if viewModel.isLoggedIn && viewModel.isOwner {
+            guard let ownerTabBarController = storyboard?.instantiateViewController(withIdentifier: "OwnerTabBarController") else { return }
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(ownerTabBarController)
+        } else if viewModel.isLoggedIn {
+            guard let customerTabBarController = storyboard?.instantiateViewController(withIdentifier: "CustomerTabBar") else { return }
+            (UIApplication.shared.connectedScenes.first?.delegate as?  SceneDelegate)?.changeRootViewController(customerTabBarController)
+        }
+    }
 }

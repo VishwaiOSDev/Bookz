@@ -7,9 +7,15 @@
 
 import Foundation
 
+protocol AuthenticationDelegate {
+    func updateView()
+}
+
 final class AuthenticationViewModel {
     
     private var model = Authentication()
+    var delegate : AuthenticationDelegate?
+    
     var isLoggedIn : Bool {
         didSet {
             Storage.saveDataInUserDefaults(data: isLoggedIn, forKey: "isLoggedIn")
@@ -29,12 +35,17 @@ final class AuthenticationViewModel {
     func doSignUp(with details : Authentication.User) {
         self.isLoggedIn = model.performSignUp(for: details)
         self.isOwner = model.checkUserOrOwner(for: details)
+        Storage.saveDataInUserDefaults(data: details.email, forKey: "email")
+        delegate?.updateView()
     }
     
     func doLogin(with details : Authentication.User) {
         self.isLoggedIn = model.performLogin(for: details)
-        self.isOwner = model.checkUserOrOwner(for: details)
-        model.getAllUser()
+        if isLoggedIn {
+            self.isOwner = model.checkUserOrOwner(for: details)
+            Storage.saveDataInUserDefaults(data: details.email, forKey: "email")
+            delegate?.updateView()
+        }
     }
     
     func performLogout() {
